@@ -17,7 +17,7 @@
       
       <tr>
 	<th> {{item}} </th>
-	<th> </th>
+	<th> {{occDict[item]}} </th>
 
 
 	
