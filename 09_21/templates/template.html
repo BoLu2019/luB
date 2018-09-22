@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foist</title>
+    </head>
+  <body>
+    <h1>Occupations</h1>
+
+    <table>
+      <tr>
+	<th>Occupations </th>
+	<th>Percentages </th>
+      </tr>
+      
+      
+      {% for item in occ %}
+      
+      <tr>
+	<th> {{item}} </th>
+	<th> {{occDict[item]}} </th>
+
+
+	
+      </tr>
+      {% endfor %}
+
+    </table>
+  </body>
+  </html>
