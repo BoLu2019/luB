@@ -2,6 +2,10 @@
 #SoftDev pd6
 #K #10: Jinja Tuning ...
 #2018-09-23
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7672fd4b7c2b49df9c8dfcca7d30326a51296e7
 from flask import Flask, render_template
 from utils import reader
 import random
