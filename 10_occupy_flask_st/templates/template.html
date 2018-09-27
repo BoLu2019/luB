@@ -4,24 +4,30 @@
     <title>Foist</title>
     </head>
   <body>
-    <h1>Occupations</h1>
+    <h1>The Official Jinja Bread Men Job Table</h1>
+    <h4>See different jobs and what percentage of American workers are employed in these areas.</h4>
+    <h4>In addition, get a randomly chosen job!</h4>
     <table border = "1">
       <tr>
 	       <th><h3>Occupations</h3></th>
 	       <th><h3>Percentages</h3></th>
       </tr>
-      <tr>
-        <td><strong>Randomly chosen occupation:</strong></td>
-        <td><strong>{{randocc}}</strong></td>
-      </tr>
-
+      <!-- For loop, to construct table of each job/percentage key value pair from our dictionary -->
       {% for item in occ %}
+      <!-- For each job, create a new table row -->
       <tr>
+         <!-- Job -->
 	       <td> {{item}} </td>
+         <!-- Job Percentage -->
 	       <td> {{occ[item]}} </td>
       </tr>
       {% endfor %}
 
     </table>
+      <h3>Randomly chosen occupation: </h3>
+      <h3>{{randocc}}</h3>
+
+    <br>
+    <a href="/">Take me back home!</a>
   </body>
   </html>
