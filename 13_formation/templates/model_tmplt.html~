@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> {{ reqUser }} </title>
+  </head>
+
+  <body>
+    
+    <h1> Greetings {{reqUser}}, sorry for all the clutter below. Have a wonderful day <h1>
+	
+     <h3>This flask obj:</h3>
+    {{app}}<br>
+
+     <h3>request obj:</h3>
+    {{req}}<br>
+
+     <h3>args:</h3>
+    {{reqArg}}<br>
+
+    <h3>username:</h3>
+    {{reqUser}}<br>
+
+    <h3> headers:</h3>
+    {{reqHeader}}<br>
+
+
+  </body>
+
+</html>
+
