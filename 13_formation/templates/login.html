@@ -6,10 +6,15 @@
   </head>
 
   <body>
-    <form action="/auth" method="post">
-      <input type="text" name="username">
+    <form action="/auth" method="POST">
+      
+      Username: <input type="text" name="username">   <br>
+      Password:  <input type="text" name="password">
       <input type="submit" name="sub1">
+      
     </form>
+    {{error}}
+    
      <br>
   </body>
 
