@@ -1,0 +1,9 @@
+{% extends "login.html" %}
+{% block title %}Logged in{% endblock %}
+{% block body %}
+    Greetings : {{user}}
+    <form action = "/logout">
+      <input type = "submit" value = "logout"> {#button for logging out #}
+    </form>
+{% endblock %}
+

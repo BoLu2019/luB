@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    Hello dere
+
+    <title>{% block title %}{% endblock %} - 15_flashinh</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+    
+    <form action = "/auth"  method = "GET" > {#goes to auth to see if the username or pw is wrong#}
+      Username: <input type="text" name="username">   <br> {#input username #}
+      Password:  <input type="password" name="password"> {#input password #}
+      <input type="submit" name="Login">
+    </form>
+    
+    {% set msg = get_flashed_messages() %} {# if wrong username or pw inputted, flash the error message #}
+    {% for each in msg %}
+    {{each}}
+    {% endfor %}
+
+    <div id="footer">
+      {% block footer %}
+      Made By Team Denn is This Bo'kay
+      {% endblock %}
+    </div>
+
+    {% endblock %}
+  </body>
+</html>
