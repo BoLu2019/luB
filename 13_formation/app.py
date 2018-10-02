@@ -3,35 +3,45 @@
 #K #13: Echo Echo Echo 
 #2018-9-27
 
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request
 app = Flask(__name__)    #create Flask object
 
 
 @app.route("/")
 def disp_loginpage():
+    #workflow: uncomment one line at a time, re-run...
+    print("\n\n\n")
+    print( "***DIAG: this Flask obj ***" )
+    print( app )
+    print( "***DIAG: request obj ***" )
+    print( request ) 
+    print( "***DIAG: request.args ***" )
+    print( request.args )
+    print( "***DIAG: request.args['username']  ***" )
+    #print( request.args['username'] )
+    #print( "***DIAG: request.headers ***" )
+    #print( request.headers )
     return render_template( 'login.html' )
 
 
-@app.route("/auth", methods = ["POST"])
+@app.route("/auth")
 def authenticate():
-    print (url_for('disp_loginpage'))
-    print (url_for('authenticate'))
-    user = 'Bo'
-    passwd = 'Dennis'
-
-    
-    if request.form["username"] != 'Bo':
-        rtr = "Wrong username buddy"
-        return render_template( 'login.html', error = rtr)
-
-    if request.form["password"] != 'Dennis':
-        rtr = "Wrong password buddy"
-        return render_template( 'login.html', error = rtr)
-
+    print("\n\n\n")
+    print( "***DIAG: this Flask obj ***" )
+    print( app )
+    print( "***DIAG: request obj ***" )
+    print( request )
+    print( "***DIAG: request.args ***" )
+    print( request.args )
+    print( "***DIAG: request.args['username']  ***" )
+    print( request.args['username'] )
+    print( "***DIAG: request.headers ***" )
+    print( request.headers )
     return render_template( 'model_tmplt.html',
                             app = app,
                             req = request,
-                            reqUser = "Bo",
+                            reqArg = request.args,
+                            reqUser = request.args['username'],
                             reqHeader = request.headers,
                             reqMethod = request.method
                             )
