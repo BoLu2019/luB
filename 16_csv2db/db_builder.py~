@@ -1,6 +1,6 @@
-#Team Haribo Gummy Bears - Claire Liu & Bo Hui Lu
-#SoftDev1 pd6
-#K #16: No Trouble
+#Clyde "Thluffy" Sinclair
+#SoftDev1 pd0
+#SQLITE3 BASICS
 #2018-10-04
 
 import sqlite3   #enable control of an sqlite database
@@ -14,15 +14,13 @@ c = db.cursor()               #facilitate db ops
 
 #==========================================================
 #INSERT YOUR POPULATE CODE IN THIS ZONE
-command = "CREATE TABLE students(name TEXT,age INTEGER,userid INTEGER)"
-c.execute(command)
+command = "CREATE TABLE notroster(name TEXT,age INTEGER,userid INTEGER)"
 with open('peeps.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        command="INSERT INTO students(name, age, userid) VALUES ('"
-        command+= row['name'] + "'," + row['age'] + "," + row['id']
-        command+= ");" 
-        c.execute(command)   
+        command+='''INSERT INTO notroster VALUES (row['name'])'''
+        print(row['name'])
+c.execute(command)   
 
 #==========================================================
 
