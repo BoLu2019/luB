@@ -1,3 +1,10 @@
+/*
+Team SlipKnot -- Angela Tom + Bo Hui Lu
+SoftDev1 pd6
+K28 -- Sequential Progression
+2018-12-18
+*/
+
 var fibonacci = (n) => {
     if (n <= 0){
 	return 0;
@@ -29,8 +36,10 @@ var gcd = (a, b) => {
     }
 }
 
-var students = []
+var students = ["Angela", "Person", "Person2", "Someone", "Name", "Name2"]
 
 var randomStudent = () => {
-    
+    //console.log(students.length)
+    //console.log(Math.random(students.length))
+    return students[Math.floor(Math.random() * students.length)]
 }
